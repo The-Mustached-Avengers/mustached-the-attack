@@ -1,9 +1,9 @@
 pipeline {
-  agent any
+  agent none
   stages {
-    stage('Build') {
+    stage('Publish Event') {
       steps {
-        echo 'Hi'
+        publishEvent simpleEvent('mustachedEvent')
       }
     }
   }
